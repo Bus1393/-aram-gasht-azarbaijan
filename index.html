@@ -1,513 +1,309 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>آرام گشت آذرابادگان | حمل‌ونقل و خدمات اتوبوسرانی تبریز</title>
-<meta name="description" content="آرام گشت آذرابادگان؛ پیشرو در صنعت حمل‌ونقل، ایمنی در سفر و ارائه خدمات نوین اتوبوسرانی در کلان‌شهر تبریز از سال ۱۳۹۳. مدیرعامل حبیب چمنی.">
-<meta name="keywords" content="آرام گشت آذرابادگان, حبیب چمنی, امیر ابوالفضل چمنی, سمیرا پرمه, حمید لواسانی, امیر سلیمانی, اتوبوسرانی تبریز, حمل و نقل تبریز">
-<meta name="author" content="آرام گشت آذرابادگان">
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph -->
-<meta property="og:title" content="آرام گشت آذرابادگان">
-<meta property="og:description" content="پیشرو در صنعت حمل‌ونقل و خدمات اتوبوسرانی تبریز از سال ۱۳۹۳">
-<meta property="og:type" content="website">
-<meta property="og:image" content="hero.jpg">
-
-<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
-<style>
-  :root{
-    --navy:#0b1e3d;
-    --navy-2:#122a52;
-    --gold:#c9a227;
-    --gold-light:#e3c258;
-    --ink:#1a2233;
-    --muted:#6b7280;
-    --bg:#f7f8fb;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Vazirmatn',Tahoma,sans-serif;
-    background:var(--bg);color:var(--ink);
-    line-height:1.9;overflow-x:hidden;
-  }
-  .container{max-width:1180px;margin:0 auto;padding:0 20px;}
-
-  /* ===== HEADER ===== */
-  header{
-    position:fixed;top:0;left:0;right:0;z-index:1000;
-    background:rgba(11,30,61,.92);backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(201,162,39,.25);
-    transition:.3s;
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;}
-  .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:1.05rem;}
-  .logo-mark{
-    width:38px;height:38px;border-radius:10px;
-    background:linear-gradient(135deg,var(--gold),var(--gold-light));
-    display:grid;place-items:center;color:var(--navy);font-size:1.2rem;font-weight:900;
-  }
-  .nav-links{display:flex;gap:26px;list-style:none;}
-  .nav-links a{
-    color:#d6dcea;text-decoration:none;font-size:.95rem;font-weight:500;
-    position:relative;padding-bottom:4px;transition:.25s;
-  }
-  .nav-links a::after{
-    content:'';position:absolute;bottom:0;right:0;width:0;height:2px;
-    background:var(--gold);transition:.3s;
-  }
-  .nav-links a:hover{color:#fff;}
-  .nav-links a:hover::after{width:100%;}
-  .btn-call{
-    background:linear-gradient(135deg,var(--gold),var(--gold-light));
-    color:var(--navy);padding:10px 22px;border-radius:50px;
-    text-decoration:none;font-weight:700;font-size:.9rem;
-    box-shadow:0 6px 20px rgba(201,162,39,.35);transition:.3s;
-  }
-  .btn-call:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(201,162,39,.5);}
-  .burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer;}
-
-  /* ===== HERO ===== */
-  .hero{
-    position:relative;min-height:100vh;display:flex;align-items:center;
-    background:linear-gradient(120deg,rgba(11,30,61,.95) 0%,rgba(11,30,61,.75) 55%,rgba(18,42,82,.55) 100%),
-               url('hero.jpg') center/cover no-repeat fixed;
-    padding-top:72px;
-  }
-  .hero::before{
-    content:'';position:absolute;inset:0;
-    background:radial-gradient(circle at 80% 30%,rgba(201,162,39,.18),transparent 55%);
-  }
-  .hero-inner{position:relative;z-index:2;max-width:720px;}
-  .badge{
-    display:inline-flex;align-items:center;gap:8px;
-    background:rgba(201,162,39,.13);border:1px solid rgba(201,162,39,.4);
-    color:var(--gold-light);padding:7px 18px;border-radius:50px;
-    font-size:.85rem;font-weight:600;margin-bottom:26px;
-  }
-  .badge span{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite;}
-  @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.4);}}
-  .hero h1{
-    color:#fff;font-size:clamp(2rem,5vw,3.4rem);font-weight:900;
-    line-height:1.35;margin-bottom:22px;
-  }
-  .hero h1 em{color:var(--gold);font-style:normal;}
-  .hero p{
-    color:#c4cde0;font-size:clamp(1rem,2vw,1.15rem);
-    max-width:600px;margin-bottom:36px;
-  }
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
-  .btn-primary{
-    background:linear-gradient(135deg,var(--gold),var(--gold-light));
-    color:var(--navy);padding:15px 34px;border-radius:50px;
-    text-decoration:none;font-weight:800;font-size:1rem;
-    box-shadow:0 10px 30px rgba(201,162,39,.4);transition:.3s;
-  }
-  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(201,162,39,.55);}
-  .btn-ghost{
-    border:1.5px solid rgba(255,255,255,.3);color:#fff;
-    padding:15px 34px;border-radius:50px;text-decoration:none;
-    font-weight:600;transition:.3s;
-  }
-  .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:var(--gold);}
-
-  /* ===== SECTIONS ===== */
-  section{padding:96px 0;}
-  .sec-head{text-align:center;max-width:720px;margin:0 auto 60px;}
-  .sec-tag{
-    display:inline-block;color:var(--gold);font-weight:700;
-    font-size:.85rem;letter-spacing:1px;margin-bottom:12px;
-  }
-  .sec-head h2{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;color:var(--navy);margin-bottom:16px;}
-  .sec-head p{color:var(--muted);font-size:1.02rem;}
-
-  /* ===== STATS ===== */
-  .stats{
-    background:linear-gradient(135deg,var(--navy),var(--navy-2));
-    padding:64px 0;position:relative;overflow:hidden;
-  }
-  .stats::before{
-    content:'';position:absolute;top:-50%;left:-10%;width:500px;height:500px;
-    background:radial-gradient(circle,rgba(201,162,39,.15),transparent 70%);
-  }
-  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;}
-  .stat{text-align:center;color:#fff;}
-  .stat b{display:block;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--gold);line-height:1.2;}
-  .stat span{font-size:.9rem;color:#a9b6cf;}
-
-  /* ===== ABOUT ===== */
-  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;}
-  .about-img{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 24px 60px rgba(11,30,61,.2);}
-  .about-img img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;}
-  .about-img::after{
-    content:'';position:absolute;inset:0;
-    background:linear-gradient(to top,rgba(11,30,61,.35),transparent 55%);
-  }
-  .about-text h3{font-size:1.7rem;color:var(--navy);font-weight:900;margin-bottom:18px;}
-  .about-text p{color:#4b5563;margin-bottom:16px;text-align:justify;}
-  .feature-list{list-style:none;margin-top:26px;display:grid;gap:14px;}
-  .feature-list li{display:flex;gap:12px;align-items:flex-start;}
-  .tick{
-    flex:0 0 26px;height:26px;border-radius:8px;
-    background:rgba(201,162,39,.15);color:var(--gold);
-    display:grid;place-items:center;font-size:.8rem;font-weight:900;
-  }
-
-  /* ===== MANAGEMENT ===== */
-  .mgr-section{background:#fff;}
-  .mgr-card{
-    display:grid;grid-template-columns:280px 1fr;gap:0;
-    background:#fff;border-radius:22px;overflow:hidden;
-    box-shadow:0 12px 40px rgba(11,30,61,.1);
-    margin-bottom:30px;border:1px solid #eef0f5;
-    transition:.4s;
-  }
-  .mgr-card:hover{transform:translateY(-4px);box-shadow:0 20px 55px rgba(11,30,61,.16);}
-  .mgr-photo{
-    position:relative;background:linear-gradient(160deg,var(--navy),var(--navy-2));
-    display:grid;place-items:center;padding:30px;
-  }
-  .mgr-photo img{
-    width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;
-    border:3px solid rgba(201,162,39,.5);
-  }
-  .mgr-info{padding:38px 36px;}
-  .mgr-role{
-    display:inline-block;background:rgba(201,162,39,.12);color:#96790f;
-    padding:5px 16px;border-radius:50px;font-size:.8rem;font-weight:700;margin-bottom:12px;
-  }
-  .mgr-info h4{font-size:1.45rem;color:var(--navy);font-weight:900;margin-bottom:14px;}
-  .mgr-info p{color:#5a6478;font-size:.97rem;text-align:justify;}
-
-  /* ===== SERVICES ===== */
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-  .svc{
-    background:#fff;border-radius:20px;padding:38px 30px;
-    border:1px solid #eef0f5;box-shadow:0 6px 24px rgba(11,30,61,.06);
-    transition:.35s;position:relative;overflow:hidden;
-  }
-  .svc::before{
-    content:'';position:absolute;top:0;right:0;width:0;height:4px;
-    background:linear-gradient(90deg,var(--gold),var(--gold-light));transition:.4s;
-  }
-  .svc:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(11,30,61,.14);}
-  .svc:hover::before{width:100%;}
-  .svc-icon{
-    width:58px;height:58px;border-radius:16px;
-    background:linear-gradient(135deg,rgba(201,162,39,.15),rgba(201,162,39,.05));
-    display:grid;place-items:center;font-size:1.6rem;margin-bottom:20px;
-  }
-  .svc h4{font-size:1.15rem;color:var(--navy);font-weight:800;margin-bottom:12px;}
-  .svc p{color:#5a6478;font-size:.94rem;line-height:1.9;}
-
-  /* ===== STAFF ===== */
-  .staff-section{background:#fff;}
-  .staff-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;}
-  .staff{
-    background:var(--bg);border-radius:16px;padding:22px 18px;text-align:center;
-    border:1px solid #e9ecf3;transition:.3s;
-  }
-  .staff:hover{background:#fff;border-color:rgba(201,162,39,.5);transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(11,30,61,.1);}
-  .staff-avatar{
-    width:52px;height:52px;border-radius:50%;margin:0 auto 12px;
-    background:linear-gradient(135deg,var(--navy),var(--navy-2));
-    color:var(--gold-light);display:grid;place-items:center;font-weight:800;font-size:1.1rem;
-  }
-  .staff b{display:block;color:var(--navy);font-size:.95rem;font-weight:700;}
-  .staff small{color:var(--muted);font-size:.78rem;}
-
-  /* ===== CONTACT ===== */
-  .contact{background:linear-gradient(140deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;position:relative;overflow:hidden;}
-  .contact::before{
-    content:'';position:absolute;bottom:-30%;right:-10%;width:600px;height:600px;
-    background:radial-gradient(circle,rgba(201,162,39,.13),transparent 70%);
-  }
-  .contact .sec-head h2{color:#fff;}
-  .contact .sec-head p{color:#a9b6cf;}
-  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;position:relative;}
-  .cbox{
-    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
-    border-radius:18px;padding:32px 26px;text-align:center;
-    backdrop-filter:blur(8px);transition:.35s;
-  }
-  .cbox:hover{background:rgba(201,162,39,.1);border-color:rgba(201,162,39,.45);transform:translateY(-5px);}
-  .cbox .ic{font-size:1.8rem;margin-bottom:14px;}
-  .cbox h5{color:var(--gold);font-size:.85rem;font-weight:700;margin-bottom:10px;letter-spacing:.5px;}
-  .cbox p{color:#dbe2f0;font-size:.95rem;line-height:1.9;}
-  .cbox a{color:#fff;text-decoration:none;font-weight:700;direction:ltr;display:inline-block;}
-  .cbox a:hover{color:var(--gold-light);}
-
-  /* ===== FOOTER ===== */
-  footer{background:#08162c;color:#8b9ab5;padding:44px 0 26px;text-align:center;}
-  footer .f-logo{color:#fff;font-weight:900;font-size:1.1rem;margin-bottom:10px;}
-  footer p{font-size:.85rem;}
-  footer .divider{height:1px;background:rgba(255,255,255,.08);margin:26px 0 20px;}
-  footer small{font-size:.78rem;color:#5f6d87;}
-
-  /* ===== REVEAL ANIMATION ===== */
-  .reveal{opacity:0;transform:translateY(36px);transition:.8s cubic-bezier(.2,.8,.2,1);}
-  .reveal.on{opacity:1;transform:none;}
-
-  /* ===== RESPONSIVE ===== */
-  @media(max-width:900px){
-    .about-grid{grid-template-columns:1fr;gap:36px;}
-    .services-grid{grid-template-columns:1fr 1fr;}
-    .stats-grid{grid-template-columns:1fr 1fr;gap:32px 20px;}
-    .contact-grid{grid-template-columns:1fr;}
-    .mgr-card{grid-template-columns:1fr;}
-    .mgr-photo{padding:26px;}
-    .mgr-photo img{max-width:260px;margin:0 auto;}
-    .mgr-info{padding:28px 24px;}
-  }
-  @media(max-width:680px){
-    .nav-links{display:none;}
-    .btn-call{display:none;}
-    .burger{display:block;}
-    .nav-links.open{
-      display:flex;flex-direction:column;position:absolute;top:72px;right:0;left:0;
-      background:var(--navy);padding:20px;gap:16px;border-bottom:2px solid var(--gold);
-    }
-    .services-grid{grid-template-columns:1fr;}
-    section{padding:70px 0;}
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آرام گشت آذرابادگان | شرکت حمل‌ونقل و اتوبوسرانی تبریز</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0f172a 100%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 antialiased">
 
-<!-- HEADER -->
-<header>
-  <div class="container nav">
-    <div class="logo">
-      <div class="logo-mark">آ</div>
-      <span>آرام گشت آذرابادگان</span>
-    </div>
-    <ul class="nav-links" id="menu">
-      <li><a href="#home">خانه</a></li>
-      <li><a href="#about">درباره ما</a></li>
-      <li><a href="#management">مدیریت</a></li>
-      <li><a href="#services">خدمات</a></li>
-      <li><a href="#staff">کارکنان</a></li>
-      <li><a href="#contact">تماس</a></li>
-    </ul>
-    <a href="tel:09945384550" class="btn-call">تماس با ما</a>
-    <button class="burger" id="burger">☰</button>
-  </div>
-</header>
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 text-white p-2.5 rounded-xl shadow-md">
+                    <i class="fa-solid fa-bus-simple text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-lg text-gray-900">آرام گشت آذرابادگان</h1>
+                    <p class="text-xs text-gray-500">پیشرو در حمل‌ونقل تبریز - تأسیس ۱۳۹۳</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-blue-600 transition">درباره ما</a>
+                <a href="#managers" class="hover:text-blue-600 transition">هیئت مدیره</a>
+                <a href="#services" class="hover:text-blue-600 transition">خدمات ما</a>
+                <a href="#team" class="hover:text-blue-600 transition">کارکنان و بازرسان</a>
+                <a href="#contact" class="hover:text-blue-600 transition">تماس با ما</a>
+            </nav>
+            <div>
+                <a href="tel:09945384550" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2.5 rounded-xl shadow-md transition flex items-center gap-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>تماس سریع</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="container hero-inner">
-    <div class="badge"><span></span> فعال از سال ۱۳۹۳ در تبریز</div>
-    <h1>پیشرو در <em>صنعت حمل‌ونقل</em> و ایمنی در سفر</h1>
-    <p>آرام گشت آذرابادگان؛ ارائه خدمات نوین اتوبوسرانی در کلان‌شهر تبریز با تکیه بر ناوگان مدرن، کادر حرفه‌ای و تعهد به ایمنی مسافران.</p>
-    <div class="hero-actions">
-      <a href="#services" class="btn-primary">خدمات ما</a>
-      <a href="#contact" class="btn-ghost">ارتباط با ما</a>
-    </div>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <span class="bg-blue-500/30 text-blue-200 text-xs font-semibold px-3 py-1.5 rounded-full uppercase tracking-wider border border-blue-400/30">فعال از سال ۱۳۹۳ در کلان‌شهر تبریز</span>
+                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight mt-6 leading-tight">
+                    ایمنی در سفر، <br><span class="text-blue-400">تعهد در خدمات اتوبوسرانی</span>
+                </h2>
+                <p class="mt-6 text-lg text-gray-300 leading-relaxed">
+                    شرکت آرام گشت آذرابادگان با تکیه بر ناوگان مدرن، کادر متخصص و نظارت مستمر بازرسان ایمنی، ارائه‌دهنده خدمات نوین حمل‌ونقل عمومی به شرکت اتوبوسرانی تبریز است.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white font-medium px-6 py-3 rounded-xl shadow-lg transition">ارتباط با ما</a>
+                    <a href="#services" class="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-xl backdrop-blur-sm border border-white/20 transition">مشاهده خدمات</a>
+                </div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 shadow-2xl">
+                <div class="grid grid-cols-2 gap-6 text-center">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <div class="text-3xl font-black text-blue-300">۱۳۹۳</div>
+                        <div class="text-xs text-gray-300 mt-2">سال تأسیس شرکت</div>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <div class="text-3xl font-black text-blue-300">۶۰</div>
+                        <div class="text-xs text-gray-300 mt-2">سرمایه ثبتی (میلیارد تومان)</div>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <div class="text-3xl font-black text-blue-300">۱۳</div>
+                        <div class="text-xs text-gray-300 mt-2">کارمند متخصص</div>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <div class="text-3xl font-black text-blue-300">۲</div>
+                        <div class="text-xs text-gray-300 mt-2">بازرس ارشد ایمنی</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="container stats-grid">
-    <div class="stat"><b>۱۳۹۳</b><span>سال تأسیس</span></div>
-    <div class="stat"><b>۶۰</b><span>سرمایه ثبتی (میلیارد تومان)</span></div>
-    <div class="stat"><b>۱۳</b><span>کارمند متخصص</span></div>
-    <div class="stat"><b>۲</b><span>بازرس ایمنی</span></div>
-  </div>
-</div>
+    <!-- About Us -->
+    <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h3 class="text-3xl font-bold text-gray-900">درباره آرام گشت آذرابادگان</h3>
+            <p class="mt-4 text-gray-600">نگاهی به مسیر رشد، استانداردهای ایمنی و تعهد ما به حمل‌ونقل شهری تبریز</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h4 class="text-xl font-bold text-gray-900 mb-4">مسئولیت اجتماعی و ایمنی مسافران</h4>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    ما باور داریم حمل‌ونقل عمومی فقط جابه‌جایی مسافر نیست؛ بلکه مسئولیتی بزرگ در قبال امنیت، آرامش و وقت شهروندان عزیز تبریزی است. تمام فرایندهای عملیاتی ما بر پایه استانداردهای روز ایمنی طراحی شده‌اند.
+                </p>
+                <ul class="space-y-3 text-sm text-gray-700">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-600"></i> ناوگان تحت نظارت مستمر بازرسان فنی و ایمنی</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-600"></i> کادر عملیاتی و پشتیبانی آموزش‌دیده و متعهد</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-600"></i> سرمایه ثبتی ۶۰ میلیارد تومان و پشتوانه مستحکم مالی</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-blue-600"></i> همکاری پایدار با اتوبوسرانی کلان‌شهر تبریز</li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-blue-900 text-white p-6 rounded-3xl flex flex-col justify-between">
+                    <i class="fa-solid fa-shield-halved text-3xl text-blue-400"></i>
+                    <div class="mt-8">
+                        <div class="font-bold text-lg">ایمنی تضمین‌شده</div>
+                        <p class="text-xs text-gray-300 mt-1">بازرسی فنی دوره‌ای قبل از هر سرویس</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between mt-6">
+                    <i class="fa-solid fa-handshake text-3xl text-blue-600"></i>
+                    <div class="mt-8">
+                        <div class="font-bold text-lg text-gray-900">مدیریت حرفه‌ای</div>
+                        <p class="text-xs text-gray-500 mt-1">رهبری با تجربه و شفافیت مالی</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-img reveal">
-        <img src="hero.jpg" alt="آرام گشت آذرابادگان - ناوگان اتوبوس">
-      </div>
-      <div class="about-text reveal">
-        <span class="sec-tag">درباره ما</span>
-        <h3>آرام گشت آذرابادگان؛ ایمنی در سفر</h3>
-        <p>شرکت آرام گشت آذرابادگان از سال <strong>۱۳۹۳</strong> فعالیت خود را در حوزه حمل‌ونقل عمومی آغاز کرده و امروز به‌عنوان یکی از شرکت‌های فعال، خدمات اتوبوسرانی خود را به شرکت اتوبوسرانی کلان‌شهر تبریز ارائه می‌دهد.</p>
-        <p>ما باور داریم حمل‌ونقل عمومی فقط جابه‌جایی مسافر نیست؛ بلکه مسئولیتی اجتماعی در قبال ایمنی، آرامش و وقت شهروندان است. به همین دلیل تمام فرایندهای عملیاتی ما بر پایه استانداردهای ایمنی و کیفیت طراحی شده‌اند.</p>
-        <ul class="feature-list">
-          <li><span class="tick">✓</span> ناوگان تحت نظارت مستمر بازرسان ایمنی</li>
-          <li><span class="tick">✓</span> کادر عملیاتی و پشتیبانی آموزش‌دیده</li>
-          <li><span class="tick">✓</span> سرمایه ثبتی ۶۰ میلیارد تومان</li>
-          <li><span class="tick">✓</span> همکاری پایدار با اتوبوسرانی تبریز</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Management Team -->
+    <section id="managers" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h3 class="text-3xl font-bold text-gray-900">تیم مدیریتی و هیئت مدیره</h3>
+                <p class="mt-4 text-gray-600">رهبرانی متعهد به توسعه پایدار، کیفیت خدمات شهری و ایمنی ناوگان</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Manager 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 text-center flex flex-col justify-between">
+                    <div>
+                        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-6">
+                            ح‌چ
+                        </div>
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">مدیرعامل و رئیس هیئت مدیره</span>
+                        <h4 class="text-xl font-bold text-gray-900 mt-4">حبیب چمنی</h4>
+                        <p class="text-sm text-gray-600 mt-4 leading-relaxed">
+                            حبیب چمنی با سال‌ها تجربه در عرصه حمل‌ونقل عمومی، راهبردی کلان برای توسعه ناوگان و ارتقای استانداردهای ایمنی شرکت ترسیم کرده است.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-gray-100 text-xs text-gray-400">آرام گشت آذرابادگان</div>
+                </div>
+                <!-- Manager 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 text-center flex flex-col justify-between">
+                    <div>
+                        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-6">
+                            ا‌چ
+                        </div>
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">مدیرعامل</span>
+                        <h4 class="text-xl font-bold text-gray-900 mt-4">امیر ابوالفضل چمنی</h4>
+                        <p class="text-sm text-gray-600 mt-4 leading-relaxed">
+                            امیر ابوالفضل چمنی مسئولیت اجرای برنامه‌های عملیاتی و بهبود بهره‌وری ناوگان را بر عهده دارد تا تجربه‌ای مطمئن برای شهروندان رقم بخورد.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-gray-100 text-xs text-gray-400">آرام گشت آذرابادگان</div>
+                </div>
+                <!-- Manager 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 text-center flex flex-col justify-between">
+                    <div>
+                        <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto text-2xl font-bold mb-6">
+                            س‌پ
+                        </div>
+                        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">مالک و عضو هیئت مدیره</span>
+                        <h4 class="text-xl font-bold text-gray-900 mt-4">سمیرا پرمه</h4>
+                        <p class="text-sm text-gray-600 mt-4 leading-relaxed">
+                            سمیرا پرمه در تصمیم‌گیری‌های کلان راهبردی، ساختار سرمایه‌ای و نظارت بر شفافیت مالی سازمان نقش کلیدی ایفا می‌کند.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-gray-100 text-xs text-gray-400">آرام گشت آذرابادگان</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- MANAGEMENT -->
-<section class="mgr-section" id="management">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">تیم مدیریتی</span>
-      <h2>هیئت مدیره و مدیران</h2>
-      <p>مدیریتی متعهد به ایمنی، کیفیت و توسعه پایدار خدمات شهری</p>
-    </div>
+    <!-- Services -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h3 class="text-3xl font-bold text-gray-900">خدمات تخصصی شرکت</h3>
+            <p class="mt-4 text-gray-600">ارائه خدمات نوین حمل‌ونقل درون‌شهری با بالاترین استانداردهای ایمنی</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-bus"></i></div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">حمل‌ونقل درون‌شهری</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">خدمات اتوبوسرانی در خطوط شهری تبریز مطابق با استانداردهای شرکت اتوبوسرانی کلان‌شهر تبریز.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-clipboard-check"></i></div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">بازرسی و ایمنی مستمر</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">بررسی فنی و ایمنی ناوگان پیش از اعزام به خطوط توسط بازرسان ارشد مجرب.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl mb-6"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h4 class="text-lg font-bold text-gray-900 mb-2">نگهداری و پشتیبانی</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">واحد فنی و پشتیبانی برای حفظ آماده‌به‌کار بودن ناوگان و کاهش توقف‌های عملیاتی.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="mgr-card reveal">
-      <div class="mgr-photo"><img src="manager-habib.jpg" alt="حبیب چمنی"></div>
-      <div class="mgr-info">
-        <span class="mgr-role">مدیرعامل و رئیس هیئت مدیره</span>
-        <h4>حبیب چمنی</h4>
-        <p>حبیب چمنی با تکیه بر سال‌ها تجربه در عرصه حمل‌ونقل عمومی، راهبردی کلان برای توسعه ناوگان و ارتقای استانداردهای ایمنی شرکت ترسیم کرده است. مدیریت او بر اصل «ایمنی مسافر، اولویت اول» بنا شده و توسعه پایدار خدمات اتوبوسرانی تبریز را هدف گرفته است.</p>
-      </div>
-    </div>
+    <!-- Team & Inspectors -->
+    <section id="team" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h3 class="text-3xl font-bold text-gray-900">سرمایه انسانی و بازرسان</h3>
+                <p class="mt-4 text-gray-600">تیم متخصص و متخصصی که چرخ خدمات شرکت را با دقت می‌چرخانند</p>
+            </div>
+            
+            <!-- Inspectors Box -->
+            <div class="mb-12 bg-blue-900 text-white p-8 rounded-3xl shadow-lg">
+                <h4 class="text-xl font-bold mb-6 flex items-center gap-3"><i class="fa-solid fa-user-shield text-blue-400"></i> واحد بازرسی ایمنی</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10">
+                        <div class="text-xs text-blue-300">بازرس اصلی</div>
+                        <div class="text-lg font-bold mt-1">حمید لواسانی</div>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-2xl border border-white/10">
+                        <div class="text-xs text-blue-300">بازرس فنی</div>
+                        <div class="text-lg font-bold mt-1">امیر سلیمانی</div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="mgr-card reveal">
-      <div class="mgr-photo"><img src="manager-amir.jpg" alt="امیر ابوالفضل چمنی"></div>
-      <div class="mgr-info">
-        <span class="mgr-role">مدیرعامل</span>
-        <h4>امیر ابوالفضل چمنی</h4>
-        <p>امیر ابوالفضل چمنی مسئولیت پیاده‌سازی برنامه‌های عملیاتی و اجرایی شرکت را بر عهده دارد. تمرکز او بر بهبود بهره‌وری ناوگان، نظم عملیاتی و ایجاد تجربه‌ای روان و مطمئن برای شهروندان تبریزی است.</p>
-      </div>
-    </div>
+            <!-- Staff Grid -->
+            <h4 class="text-lg font-bold text-gray-900 mb-6">کارکنان و پرسنل اجرایی</h4>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">علیرضا اصلانی</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">توحید نبوی</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">هادی الیاسی</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">مریم هادیان</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">احسان مشوق</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">فاطمه معصومی</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">ترانه آهنگر</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">محسن فکری</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">امیرحسین گلچین</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">رضا خرمی</span></div>
+                <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-200 text-center"><span class="text-sm font-bold text-gray-800">هستی دولتی</span></div>
+            </div>
+        </div>
+    </section>
 
-    <div class="mgr-card reveal">
-      <div class="mgr-photo"><img src="manager-samira.jpg" alt="سمیرا پرمه"></div>
-      <div class="mgr-info">
-        <span class="mgr-role">مالک و عضو هیئت مدیره</span>
-        <h4>سمیرا پرمه</h4>
-        <p>سمیرا پرمه به‌عنوان مالک و عضو هیئت مدیره، در تصمیم‌گیری‌های راهبردی و ساختار سرمایه‌ای شرکت نقش کلیدی دارد. رویکرد او بر شفافیت مالی و توسعه متوازن سازمان استوار است.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Contact Us -->
+    <section id="contact" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full">ارتباط با ما</span>
+                <h3 class="text-3xl font-bold text-gray-900 mt-4">همیشه در دسترس شما هستیم</h3>
+                <p class="text-gray-600 mt-4 leading-relaxed">
+                    برای هرگونه پرسش، پیشنهاد یا هماهنگی همکاری می‌توانید از طریق شماره تماس یا آدرس دفتر مرکزی با ما در ارتباط باشید.
+                </p>
+                <div class="mt-8 space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="text-xs text-gray-400">شماره تماس</div>
+                            <a href="tel:09945384550" class="text-lg font-bold text-gray-900 mt-1 hover:text-blue-600 transition dir-ltr inline-block">0994 538 4550</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div class="text-xs text-gray-400">نشانی دفتر مرکزی</div>
+                            <div class="text-gray-800 mt-1 font-medium">تبریز، زعفرانیه، بالاتر از درمانگاه تأمین اجتماعی، اول ده‌متری بیست و یک</div>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <div class="text-xs text-gray-400">ساعات کاری</div>
+                            <div class="text-gray-800 mt-1 font-medium">شنبه تا چهارشنبه: ۸:۰۰ الی ۱۶:۰۰</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-3xl flex flex-col justify-center items-center text-center border border-gray-200">
+                <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h4 class="text-xl font-bold text-gray-900">پاسخگویی سریع</h4>
+                <p class="text-sm text-gray-600 mt-2">برای تماس فوری با مدیریت و واحد اداری می‌توانید مستقیماً روی دکمه زیر کلیک کنید.</p>
+                <a href="tel:09945384550" class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-xl shadow-md transition flex items-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>تماس با شرکت</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">خدمات ما</span>
-      <h2>آنچه ارائه می‌دهیم</h2>
-      <p>خدمات اتوبوسرانی درون‌شهری با استانداردهای ایمنی و کیفیت</p>
-    </div>
-    <div class="services-grid">
-      <div class="svc reveal">
-        <div class="svc-icon">🚌</div>
-        <h4>حمل‌ونقل درون‌شهری</h4>
-        <p>ارائه خدمات اتوبوسرانی در خطوط شهری تبریز مطابق با قرارداد با شرکت اتوبوسرانی کلان‌شهر تبریز.</p>
-      </div>
-      <div class="svc reveal">
-        <div class="svc-icon">🛡️</div>
-        <h4>ایمنی و بازرسی مستمر</h4>
-        <p>بازرسی فنی و ایمنی ناوگان به‌صورت دوره‌ای توسط بازرسان مجرب، پیش از هر نوبت عملیاتی.</p>
-      </div>
-      <div class="svc reveal">
-        <div class="svc-icon">⚙️</div>
-        <h4>نگهداری و پشتیبانی</h4>
-        <p>واحد پشتیبانی و نگهداری برای آماده‌به‌کار نگه‌داشتن ناوگان و کاهش توقف‌های عملیاتی.</p>
-      </div>
-      <div class="svc reveal">
-        <div class="svc-icon">👥</div>
-        <h4>مدیریت منابع انسانی</h4>
-        <p>آموزش و نظارت بر رانندگان و پرسنل برای ارائه خدمات با بالاترین سطح مسئولیت‌پذیری.</p>
-      </div>
-      <div class="svc reveal">
-        <div class="svc-icon">📋</div>
-        <h4>برنامه‌ریزی خطوط</h4>
-        <p>هماهنگی زمان‌بندی حرکت اتوبوس‌ها و بهینه‌سازی مسیرها برای خدمات روان‌تر به شهروندان.</p>
-      </div>
-      <div class="svc reveal">
-        <div class="svc-icon">📞</div>
-        <h4>پاسخ‌گویی به شهروندان</h4>
-        <p>دریافت نظرات، انتقادات و پیشنهادات شهروندان برای بهبود مستمر کیفیت خدمات.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                    <i class="fa-solid fa-bus-simple"></i>
+                </div>
+                <span class="font-bold text-lg">آرام گشت آذرابادگان</span>
+            </div>
+            <p class="text-sm text-gray-400 text-center">تمامی حقوق برای شرکت آرام گشت آذرابادگان (تأسیس ۱۳۹۳) محفوظ است.</p>
+            <div class="text-xs text-gray-500">طراحی و توسعه حرفه‌ای</div>
+        </div>
+    </footer>
 
-<!-- STAFF -->
-<section class="staff-section" id="staff">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag">سرمایه انسانی</span>
-      <h2>کارکنان و همکاران</h2>
-      <p>تیمی از ۱۳ متخصص که چرخ خدمات شرکت را می‌چرخانند</p>
-    </div>
-    <div class="staff-grid">
-      <div class="staff reveal"><div class="staff-avatar">ع</div><b>علیرضا اصلانی</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ت</div><b>توحید نبوی</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ه</div><b>هادی الیاسی</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">م</div><b>مریم هادیان</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ا</div><b>احسان مشوق</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ف</div><b>فاطمه معصومی</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ت</div><b>ترانه آهنگر</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">م</div><b>محسن فکری</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ا</div><b>امیرحسین گلچین</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ر</div><b>رضا خرمی</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ه</div><b>هستی دولتی</b><small>کارمند</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ح</div><b>حمید لواسانی</b><small>بازرس اصلی</small></div>
-      <div class="staff reveal"><div class="staff-avatar">ا</div><b>امیر سلیمانی</b><small>بازرس</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="sec-head reveal">
-      <span class="sec-tag" style="color:var(--gold-light)">تماس با ما</span>
-      <h2>همیشه در دسترس شما</h2>
-      <p>برای هر پرسش، پیشنهاد یا همکاری در خدمت شما هستیم</p>
-    </div>
-    <div class="contact-grid">
-      <div class="cbox reveal">
-        <div class="ic">📞</div>
-        <h5>شماره تماس</h5>
-        <a href="tel:09945384550">0994 538 4550</a>
-      </div>
-      <div class="cbox reveal">
-        <div class="ic">📍</div>
-        <h5>نشانی دفتر</h5>
-        <p>تبریز، زعفرانیه، بالاتر از درمانگاه تأمین اجتماعی، اول ده‌متری بیست و یک</p>
-      </div>
-      <div class="cbox reveal">
-        <div class="ic">🕐</div>
-        <h5>ساعات کاری</h5>
-        <p>شنبه تا چهارشنبه<br>۸:۰۰ تا ۱۶:۰۰</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="f-logo">آرام گشت آذرابادگان</div>
-    <p>پیشرو در صنعت حمل‌ونقل، ایمنی در سفر و خدمات نوین اتوبوسرانی در تبریز</p>
-    <div class="divider"></div>
-    <small>© ۱۴۰۵ آرام گشت آذرابادگان — تمامی حقوق محفوظ است.</small>
-  </div>
-</footer>
-
-<script>
-  // Mobile menu
-  const burger = document.getElementById('burger');
-  const menu = document.getElementById('menu');
-  burger.addEventListener('click', () => menu.classList.toggle('open'));
-  menu.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => menu.classList.remove('open'))
-  );
-
-  // Header shadow on scroll
-  window.addEventListener('scroll', () => {
-    document.querySelector('header').style.boxShadow =
-      window.scrollY > 40 ? '0 8px 30px rgba(0,0,0,.25)' : 'none';
-  });
-
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
 </body>
 </html>
